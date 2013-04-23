@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- Scott Waite ASD Term 1304 -->
+<html>
+    
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <title></title>
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+        <link rel="stylesheet" href="my.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
+            
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.2.0/jquery.mobile-1.2.0.min.js">
+            
+        </script>
+        <script src="main.js">
+            
+        </script>
+    </head>// Other scripts here
+    <!-- Welcome Page -->
+    <div data-role="page" id="page2">
+        <div data-theme="a" data-role="header">
+             <h3>
+                    SL Directory
+                </h3>
+
+        </div>
+        <div data-role="content">
+            <a href="#">
+                <div style=" text-align:center">
+                    <img style="width: 288px; " alt="Welcome Image" src="https://lh6.googleusercontent.com/-gLylQY-bZNM/UXB349dkdwI/AAAAAAAAAxk/AOH_r00oExI/s785/Screen+Shot+2013-04-18+at+6.45.17+PM.png" />
+                </div>
+            </a>
+            <div data-role="content">
+                <div data-role="collapsible-set" data-content-theme="e">
+                    <div data-role="collapsible" data-collapsed="true">
+                         <h3>
+                    Contact Main Office
+                </h3>
+
+                         <h4>
+                    The Main Office Number is 1-866-794-2211
+                </h4>
+
+                    </div>
+                    <div data-role="collapsible" data-collapsed="true">
+                         <h3>
+                    Calling Out
+                </h3>
+
+                         <h4>
+                    If you are calling out please utilize the phone tree to contact your supervisor
+                    directly.
+                </h4>
+
+                    </div>
+                </div>
+            </div>
+        </div> <a data-role="button" data-theme="b" href="#page1" data-icon="grid" data-iconpos="left">
+            Phone Tree
+        </a>
+
+    </div>
+    </div>
+    <div data-theme="a" data-role="footer" data-position="fixed">
+         <h3>
+                    All rights reserved
+                </h3>
+
+    </div>
+    </div>
+    <!-- Form Page -->
+    <div data-role="page" id="page1">
+        <div data-theme="a" data-role="header">
+             <h3>
+                    Phone Tree
+                </h3>
+
+        </div>
+        <div data-role="content">
+            <a href="#page2">
+                <div style=" text-align:center">
+                    <img style="width: 288px; height: 80px" alt="Banner" src="https://lh4.googleusercontent.com/-4LFAgzgOR7U/UXBp-SqUCRI/AAAAAAAAAxc/Wd7boQNN9Y0/s785/Screen+Shot+2013-04-18+at+5.46.37+PM.png" />
+                </div>
+            </a>
+            
+            <body>
+                <form id="directoryForm">
+                    <ul>
+                        <li>
+                            <label for="empID">Employee ID:</label>
+                            <input placeholder="Enter Employee ID" type="num" id="empID" />
+                        </li>
+                        <li>
+                            <label for="empName">Name:</label>
+                            <input placeholder="John Smith" type="text" id="empName" />
+                        </li>
+                        <li>
+                            <label for="empPhone">Phone:</label>
+                            <input placeholder="555-555-5555" type="tel" id="empPhone" />
+                        </li>
+                        <li>
+                            <label for="empEmail">Email:</label>
+                            <input placeholder="john.smith@streetlinks.com" type="text" id="empEmail" />
+                        </li>
+                        <li>
+                            <input type="submit" data-icon="check" data-iconpos="left" data-theme="b" value="Save" id="btnSave" />
+                        </li>
+                    </ul>
+                </form>
+                <table id="tblList"></table>
+            </body>
+        </div>
+        <div data-theme="a" data-role="footer" data-position="fixed">
+             <h3>
+                    All rights reserved
+                </h3>
+
+        </div>
+    </div>
+
+</html>
