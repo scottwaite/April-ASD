@@ -24,7 +24,7 @@ $(document).ready(function () {
                 Email: $("#empEmail").val()
             });
             tbEmployees.push(Employee);
-            localStorage.setItem("tbEmployees", JSON.stringify(tbEmployees));
+
             alert("The employee record was saved.");
             return true;
         }
