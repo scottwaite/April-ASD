@@ -1,8 +1,9 @@
 function (doc) {
 	if (doc._id.substr(0, 9) === "employee:") {
-		emit(doc._id.substr(9),{
+		emit(doc._id.substr(9), {
 		"name": doc.name,
-		"phone": doc.phone,
+		"phone": doc.phone
+		
 		});
 	}
 };
