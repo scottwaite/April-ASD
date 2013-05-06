@@ -1,22 +1,25 @@
 // Scott Waite
 // ASD Term 1304 
-$(document).ready(function () {
-
-    $.ajax({
-        "url": '/asddirectory/_all_docs?include_docs=true&start_key="name:"&end_key="name:zzz"',
-        "dataType": "json",
-        "success": function (data) {
-            $.each(data.rows, function (index, name) {
-                var name = employee.doc.name;
-                var number = employee.doc.number;
-                $('#employeelist').append(
-                    $('<li>').append(
-                    $('<a>').attr("href", "#")
-                    .text(title)));
-            });
-            $('#employeelist').listview('refresh');
-        }
+$('#home').on("pageshow", function() {
+    $.couch.db("asddirectory").view("asddirectory/employees", {
+        success: function(data) {
+          //  console.log(data);
+          $('homeItems').empty();
+          $.each(data.rows, function(index, value) {
+            var item = (value.value || value.doc);
+            $('homeItems').append(
+                $('<li>').append(
+                    $('<a>')
+                        .attr("href", "program.html")
+                        .text(item.title)
+                )
+            );
+        });
+        $('homeItems').listview('refresh');  
+            }
+        });
     });
+
 
 
 
